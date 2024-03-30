@@ -18,6 +18,9 @@ function App() {
     useEffect(() => {
         console.log("I run when 'counter' changes.", counter);
     }, [counter]);
+    useEffect(() => {
+        console.log("I run when keyword & counter changes.");
+    }, [keyword,counter]);
   return (
     <div>
         <h1 className={styles.title}>초기 세팅</h1>
