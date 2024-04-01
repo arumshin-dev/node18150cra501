@@ -13,21 +13,22 @@ function App() {
                 setLoading(false);
             });
     }, []);
-
+    //코인 선택
     const [index, setIndex] = useState("xx");
     const onSelect = (event) =>{
-        //console.log(event.target.value);//
-        //console.log(event.target.key);//
+        //console.log(event.target.value);
+        //console.log(event.target.key);
         //console.log(event.target.selectedIndex);
         //console.log(coins[event.target.selectedIndex-1]);
         setIndex(event.target.value);
     };
 
+    //코인 선택하면 몇개 살수 있는지 계산
     function Converter(prop) {
         console.log(prop.coin);
         //숫자 변수 생성
-        const [amount, setAmount] = useState(0);
-        const [result, setResult] = useState(0);
+        const [amount, setAmount] = useState(0);//얼마 인풋 값
+        const [result, setResult] = useState(0);//코인 몇개 계산 값
         const buyCoin = (event) => {
             //이벤트에서 input에 value 가져오기
             setAmount(event.target.value);
