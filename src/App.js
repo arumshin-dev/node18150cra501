@@ -9,6 +9,7 @@ function App() {
             .then((json)=>{
                 //console.log(json);
                 setMovies(json.data.movies);
+                setLoading(false);
             });
     },[]);
     console.log(movies);
